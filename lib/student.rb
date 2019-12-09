@@ -58,7 +58,13 @@ class Student
   end
 
   def self.first_X_students_in_grade_10
-    
+    sql = <<-SQL
+
+    SQL
+
+    DB[:conn].execute(sql, x).map do |row|
+
+    enbd
   end
 
   def self.first_X_students_in_grade_10(x)
